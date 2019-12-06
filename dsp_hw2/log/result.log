@@ -1,0 +1,11 @@
+Converting acoustic models to HTK format
+    output -> viterbi/mono/final.mmf viterbi/mono/tiedlist
+    log -> viterbi/mono/log/am.to.htk.log
+Generating results for test set with acoustic weight = [ 0.2 ]
+    output -> viterbi/mono/test.mlf
+    log -> viterbi/mono/log/latgen.test.log
+    result -> viterbi/mono/test.rec
+    accuracy -> [ 95.74 ] %
+
+Execution time for whole script = 00 hours 00 mins 05 secs
+
