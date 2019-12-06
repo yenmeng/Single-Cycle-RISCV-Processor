@@ -27,7 +27,7 @@ all: $(TARGET)
 map:
 	@#TODO
 	echo "Mapping..."
-	python3 mapping.py $(FROM) $(TO)
+	python3 src/mapping.py $(FROM) $(TO)
 
 clean:
 	$(RM) $(OBJ) $(TARGET)

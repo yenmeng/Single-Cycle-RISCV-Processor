@@ -69,7 +69,7 @@ void viterbi(string line, map<string, set<string> >& Map, Ngram& lm, Vocab& voc,
 	int count = Vocab::parseWords(buf, s+1, maxWordsPerLine);
 	//cout<<count<<endl;
 	s[count+1] = Vocab_SentEnd;
-	count+=1;
+	count+=1;//include </s>
 	vector<vector<LogP> > delta(count);
 	vector<vector<VocabString> > words(count);
 	vector<vector<int> > backtrack(count);
@@ -98,7 +98,6 @@ void viterbi(string line, map<string, set<string> >& Map, Ngram& lm, Vocab& voc,
 	//initial
 	for(int i=0; i<delta[0].size(); i++){
         delta[0][i] = getBigramProb("<s>", words[0][i], voc, lm);
-		//cout<<delta[0][i]<<endl;
         backtrack[0][i] = -1;
     }
 	//recursion
@@ -124,6 +123,7 @@ void viterbi(string line, map<string, set<string> >& Map, Ngram& lm, Vocab& voc,
     	ans[i] = words[i][b];
     	b = backtrack[i][b];
   	}
+	//cout<<b<<endl;
 	out<<"<s> ";
 	for(int i = 0; i < count; i++){
 		//if(ans[i]=="<unk>") continue;
@@ -162,12 +162,12 @@ int main (int argc, char* argv[]) {
 	// make Map
 	createMap(ZhuYinBig5Map,Map);
 	// read test data
-	File test_data(argv[1],"r");
+	//File test_data(argv[1],"r");
 	string line;
 	while(getline(testfile,line)){
 		//fout<<line<<endl;
 		viterbi(line,Map,lm,vocab,fout);	
 	}
-	test_data.close();
+	testfile.close();
 	return 0;
 }
