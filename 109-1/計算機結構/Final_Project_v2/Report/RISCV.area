@@ -1,0 +1,44 @@
+ 
+****************************************
+Report : area
+Design : RISCV
+Version: N-2017.09-SP2
+Date   : Sat Jan  9 01:22:53 2021
+****************************************
+
+Library(s) Used:
+
+    typical (File: /home/raid7_2/course/cvsd/CBDK_IC_Contest/CIC/SynopsysDC/db/typical.db)
+
+Number of ports:                          433
+Number of nets:                         13896
+Number of cells:                        13549
+Number of combinational cells:          11534
+Number of sequential cells:              2014
+Number of macros/black boxes:               0
+Number of buf/inv:                       1359
+Number of references:                     121
+
+Combinational area:              89646.482670
+Buf/Inv area:                     9303.449459
+Noncombinational area:           64995.141209
+Macro/Black Box area:                0.000000
+Net Interconnect area:         1754675.493195
+
+Total cell area:                154641.623879
+Total area:                    1909317.117073
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area             Local cell area
+                                  --------------------  ------------------------------ 
+Hierarchical cell                 Absolute     Percent  Combi-      Noncombi-   Black-
+                                  Total        Total    national    national    boxes   Design
+--------------------------------  -----------  -------  ----------  ----------  ------  ---------
+RISCV                             154641.6239    100.0  34557.3667   1009.9530  0.0000  RISCV
+regfile                           119074.3042     77.0  55089.1159  63985.1882  0.0000  REGFILE
+--------------------------------  -----------  -------  ----------  ----------  ------  ---------
+Total                                                   89646.4827  64995.1412  0.0000
+
+1

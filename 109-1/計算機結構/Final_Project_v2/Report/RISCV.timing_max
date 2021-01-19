@@ -1,0 +1,347 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : RISCV
+Version: N-2017.09-SP2
+Date   : Sat Jan  9 01:22:56 2021
+****************************************
+
+Operating Conditions: slow   Library: slow
+Wire Load Model Mode: top
+
+  Startpoint: rst_n (input port clocked by CLK)
+  Endpoint: mem_addr_I_reg_16_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  input external delay                     0.10       0.60 f
+  rst_n (in)                               0.03       0.63 f
+  U3921/Y (BUFX20)                         0.08       0.71 f
+  U3920/Y (INVX20)                         0.12       0.84 r
+  U3919/Y (INVX20)                         0.11       0.94 f
+  regfile/rst_n (REGFILE)                  0.00       0.94 f
+  regfile/U1856/Y (NAND2X6)                0.08       1.02 r
+  regfile/U529/Y (OR2X4)                   0.26       1.28 r
+  regfile/U533/Y (NOR2X4)                  0.10       1.38 f
+  regfile/U193/Y (BUFX12)                  0.20       1.59 f
+  regfile/U361/Y (AOI22XL)                 0.29       1.88 r
+  regfile/U123/Y (NAND4X1)                 0.15       2.03 f
+  regfile/U1912/Y (OR4X4)                  0.23       2.27 f
+  regfile/rdata2[2] (REGFILE)              0.00       2.27 f
+  U2782/Y (NAND2X4)                        0.10       2.37 r
+  U4464/Y (INVX20)                         0.20       2.56 f
+  U4465/Y (NAND2X2)                        0.11       2.68 r
+  U3124/Y (OAI2BB1X2)                      0.07       2.74 f
+  U3114/Y (BUFX12)                         0.14       2.89 f
+  U4732/Y (NOR2X1)                         0.14       3.03 r
+  U2941/Y (CLKINVX1)                       0.19       3.22 f
+  U5709/Y (NAND2X1)                        0.22       3.44 r
+  U5711/Y (CLKINVX1)                       0.12       3.57 f
+  U3637/Y (XNOR2X2)                        0.15       3.72 f
+  U5958/Y (NOR4X2)                         0.16       3.88 r
+  U5959/Y (NAND2X1)                        0.10       3.98 f
+  U5960/Y (NOR3X2)                         0.14       4.13 r
+  U5961/Y (NAND2X2)                        0.08       4.21 f
+  U5962/Y (NOR3X4)                         0.10       4.31 r
+  U5963/Y (NAND3X1)                        0.11       4.42 f
+  U5964/Y (NOR4X2)                         0.18       4.60 r
+  U5967/Y (NAND3X2)                        0.10       4.70 f
+  U5968/Y (NOR2X4)                         0.09       4.79 r
+  U5992/Y (NAND3X4)                        0.06       4.85 f
+  U5993/Y (XNOR2X4)                        0.09       4.94 f
+  U5994/Y (NAND2X8)                        0.07       5.02 r
+  U5995/Y (INVX8)                          0.04       5.05 f
+  U5996/Y (NOR2X8)                         0.10       5.16 r
+  U5997/Y (BUFX20)                         0.12       5.28 r
+  U6153/Y (OAI22X2)                        0.10       5.38 f
+  U6154/Y (NOR2X4)                         0.14       5.52 r
+  U2213/Y (INVXL)                          0.10       5.62 f
+  U4571/Y (OAI2BB1X4)                      0.13       5.75 f
+  U6167/Y (AOI21X1)                        0.20       5.95 r
+  U4564/Y (OAI2BB1X4)                      0.09       6.04 f
+  U2999/Y (INVX4)                          0.13       6.16 r
+  U4299/Y (CLKINVX1)                       0.17       6.34 f
+  U2098/Y (OAI2BB1X1)                      0.20       6.54 f
+  U2990/Y (XNOR2X1)                        0.15       6.69 r
+  U6362/Y (AO22X4)                         0.13       6.82 r
+  mem_addr_I_reg_16_/D (DFFRX2)            0.00       6.82 r
+  data arrival time                                   6.82
+
+  clock CLK (rise edge)                    6.50       6.50
+  clock network delay (ideal)              0.50       7.00
+  clock uncertainty                       -0.10       6.90
+  mem_addr_I_reg_16_/CK (DFFRX2)           0.00       6.90 r
+  library setup time                      -0.08       6.82
+  data required time                                  6.82
+  -----------------------------------------------------------
+  data required time                                  6.82
+  data arrival time                                  -6.82
+  -----------------------------------------------------------
+  slack (MET)                                         0.00
+
+
+  Startpoint: rst_n (input port clocked by CLK)
+  Endpoint: regfile/registers_reg_4__52_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    0.10       0.60 f
+  rst_n (in)                                              0.03       0.63 f
+  U3921/Y (BUFX20)                                        0.08       0.71 f
+  U3920/Y (INVX20)                                        0.12       0.84 r
+  U3919/Y (INVX20)                                        0.11       0.94 f
+  regfile/rst_n (REGFILE)                                 0.00       0.94 f
+  regfile/U1469/Y (NAND2X4)                               0.09       1.04 r
+  regfile/U537/Y (INVX3)                                  0.06       1.10 f
+  regfile/U1859/Y (NAND2X8)                               0.12       1.22 r
+  regfile/U1462/Y (NOR2X2)                                0.12       1.34 f
+  regfile/U1886/Y (CLKBUFX8)                              0.31       1.65 f
+  regfile/U6673/Y (AOI22X1)                               0.24       1.89 r
+  regfile/U6676/Y (NAND4X1)                               0.13       2.02 f
+  regfile/U6677/Y (OR4X2)                                 0.27       2.29 f
+  regfile/rdata2[3] (REGFILE)                             0.00       2.29 f
+  U2787/Y (NAND2X4)                                       0.10       2.38 r
+  U2783/Y (INVX16)                                        0.23       2.61 f
+  U3891/Y (NAND2X8)                                       0.09       2.70 r
+  U4727/Y (OAI2BB1X4)                                     0.21       2.91 f
+  U2385/Y (NOR2X6)                                        0.58       3.49 r
+  U2381/Y (INVX6)                                         0.43       3.92 f
+  U2372/Y (NOR2X1)                                        0.25       4.16 r
+  U3294/Y (CLKBUFX8)                                      0.23       4.40 r
+  U5156/Y (INVX3)                                         0.20       4.59 f
+  U5397/Y (OAI22XL)                                       0.30       4.89 r
+  U5399/Y (AOI211X1)                                      0.19       5.08 f
+  U3222/Y (AOI211X1)                                      0.24       5.32 r
+  U5409/Y (AOI211X1)                                      0.10       5.42 f
+  U3155/Y (OAI2BB1X1)                                     0.16       5.58 r
+  regfile/wdata[52] (REGFILE)                             0.00       5.58 r
+  regfile/U91/Y (INVX3)                                   0.22       5.80 f
+  regfile/U23/Y (CLKBUFX3)                                0.53       6.33 f
+  regfile/U3942/Y (OAI21XL)                               0.41       6.74 r
+  regfile/registers_reg_4__52_/D (DFFRX1)                 0.00       6.74 r
+  data arrival time                                                  6.74
+
+  clock CLK (rise edge)                                   6.50       6.50
+  clock network delay (ideal)                             0.50       7.00
+  clock uncertainty                                      -0.10       6.90
+  regfile/registers_reg_4__52_/CK (DFFRX1)                0.00       6.90 r
+  library setup time                                     -0.16       6.74
+  data required time                                                 6.74
+  --------------------------------------------------------------------------
+  data required time                                                 6.74
+  data arrival time                                                 -6.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: rst_n (input port clocked by CLK)
+  Endpoint: regfile/registers_reg_5__52_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    0.10       0.60 f
+  rst_n (in)                                              0.03       0.63 f
+  U3921/Y (BUFX20)                                        0.08       0.71 f
+  U3920/Y (INVX20)                                        0.12       0.84 r
+  U3919/Y (INVX20)                                        0.11       0.94 f
+  regfile/rst_n (REGFILE)                                 0.00       0.94 f
+  regfile/U1469/Y (NAND2X4)                               0.09       1.04 r
+  regfile/U537/Y (INVX3)                                  0.06       1.10 f
+  regfile/U1859/Y (NAND2X8)                               0.12       1.22 r
+  regfile/U1462/Y (NOR2X2)                                0.12       1.34 f
+  regfile/U1886/Y (CLKBUFX8)                              0.31       1.65 f
+  regfile/U6673/Y (AOI22X1)                               0.24       1.89 r
+  regfile/U6676/Y (NAND4X1)                               0.13       2.02 f
+  regfile/U6677/Y (OR4X2)                                 0.27       2.29 f
+  regfile/rdata2[3] (REGFILE)                             0.00       2.29 f
+  U2787/Y (NAND2X4)                                       0.10       2.38 r
+  U2783/Y (INVX16)                                        0.23       2.61 f
+  U3891/Y (NAND2X8)                                       0.09       2.70 r
+  U4727/Y (OAI2BB1X4)                                     0.21       2.91 f
+  U2385/Y (NOR2X6)                                        0.58       3.49 r
+  U2381/Y (INVX6)                                         0.43       3.92 f
+  U2372/Y (NOR2X1)                                        0.25       4.16 r
+  U3294/Y (CLKBUFX8)                                      0.23       4.40 r
+  U5156/Y (INVX3)                                         0.20       4.59 f
+  U5397/Y (OAI22XL)                                       0.30       4.89 r
+  U5399/Y (AOI211X1)                                      0.19       5.08 f
+  U3222/Y (AOI211X1)                                      0.24       5.32 r
+  U5409/Y (AOI211X1)                                      0.10       5.42 f
+  U3155/Y (OAI2BB1X1)                                     0.16       5.58 r
+  regfile/wdata[52] (REGFILE)                             0.00       5.58 r
+  regfile/U91/Y (INVX3)                                   0.22       5.80 f
+  regfile/U23/Y (CLKBUFX3)                                0.53       6.33 f
+  regfile/U5447/Y (OAI21XL)                               0.41       6.74 r
+  regfile/registers_reg_5__52_/D (DFFRX1)                 0.00       6.74 r
+  data arrival time                                                  6.74
+
+  clock CLK (rise edge)                                   6.50       6.50
+  clock network delay (ideal)                             0.50       7.00
+  clock uncertainty                                      -0.10       6.90
+  regfile/registers_reg_5__52_/CK (DFFRX1)                0.00       6.90 r
+  library setup time                                     -0.16       6.74
+  data required time                                                 6.74
+  --------------------------------------------------------------------------
+  data required time                                                 6.74
+  data arrival time                                                 -6.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: rst_n (input port clocked by CLK)
+  Endpoint: regfile/registers_reg_6__52_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    0.10       0.60 f
+  rst_n (in)                                              0.03       0.63 f
+  U3921/Y (BUFX20)                                        0.08       0.71 f
+  U3920/Y (INVX20)                                        0.12       0.84 r
+  U3919/Y (INVX20)                                        0.11       0.94 f
+  regfile/rst_n (REGFILE)                                 0.00       0.94 f
+  regfile/U1469/Y (NAND2X4)                               0.09       1.04 r
+  regfile/U537/Y (INVX3)                                  0.06       1.10 f
+  regfile/U1859/Y (NAND2X8)                               0.12       1.22 r
+  regfile/U1462/Y (NOR2X2)                                0.12       1.34 f
+  regfile/U1886/Y (CLKBUFX8)                              0.31       1.65 f
+  regfile/U6673/Y (AOI22X1)                               0.24       1.89 r
+  regfile/U6676/Y (NAND4X1)                               0.13       2.02 f
+  regfile/U6677/Y (OR4X2)                                 0.27       2.29 f
+  regfile/rdata2[3] (REGFILE)                             0.00       2.29 f
+  U2787/Y (NAND2X4)                                       0.10       2.38 r
+  U2783/Y (INVX16)                                        0.23       2.61 f
+  U3891/Y (NAND2X8)                                       0.09       2.70 r
+  U4727/Y (OAI2BB1X4)                                     0.21       2.91 f
+  U2385/Y (NOR2X6)                                        0.58       3.49 r
+  U2381/Y (INVX6)                                         0.43       3.92 f
+  U2372/Y (NOR2X1)                                        0.25       4.16 r
+  U3294/Y (CLKBUFX8)                                      0.23       4.40 r
+  U5156/Y (INVX3)                                         0.20       4.59 f
+  U5397/Y (OAI22XL)                                       0.30       4.89 r
+  U5399/Y (AOI211X1)                                      0.19       5.08 f
+  U3222/Y (AOI211X1)                                      0.24       5.32 r
+  U5409/Y (AOI211X1)                                      0.10       5.42 f
+  U3155/Y (OAI2BB1X1)                                     0.16       5.58 r
+  regfile/wdata[52] (REGFILE)                             0.00       5.58 r
+  regfile/U91/Y (INVX3)                                   0.22       5.80 f
+  regfile/U23/Y (CLKBUFX3)                                0.53       6.33 f
+  regfile/U3990/Y (OAI21XL)                               0.41       6.74 r
+  regfile/registers_reg_6__52_/D (DFFRX1)                 0.00       6.74 r
+  data arrival time                                                  6.74
+
+  clock CLK (rise edge)                                   6.50       6.50
+  clock network delay (ideal)                             0.50       7.00
+  clock uncertainty                                      -0.10       6.90
+  regfile/registers_reg_6__52_/CK (DFFRX1)                0.00       6.90 r
+  library setup time                                     -0.16       6.74
+  data required time                                                 6.74
+  --------------------------------------------------------------------------
+  data required time                                                 6.74
+  data arrival time                                                 -6.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: rst_n (input port clocked by CLK)
+  Endpoint: regfile/registers_reg_8__52_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              tsmc13_wl10           slow
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.50       0.50
+  input external delay                                    0.10       0.60 f
+  rst_n (in)                                              0.03       0.63 f
+  U3921/Y (BUFX20)                                        0.08       0.71 f
+  U3920/Y (INVX20)                                        0.12       0.84 r
+  U3919/Y (INVX20)                                        0.11       0.94 f
+  regfile/rst_n (REGFILE)                                 0.00       0.94 f
+  regfile/U1469/Y (NAND2X4)                               0.09       1.04 r
+  regfile/U537/Y (INVX3)                                  0.06       1.10 f
+  regfile/U1859/Y (NAND2X8)                               0.12       1.22 r
+  regfile/U1462/Y (NOR2X2)                                0.12       1.34 f
+  regfile/U1886/Y (CLKBUFX8)                              0.31       1.65 f
+  regfile/U6673/Y (AOI22X1)                               0.24       1.89 r
+  regfile/U6676/Y (NAND4X1)                               0.13       2.02 f
+  regfile/U6677/Y (OR4X2)                                 0.27       2.29 f
+  regfile/rdata2[3] (REGFILE)                             0.00       2.29 f
+  U2787/Y (NAND2X4)                                       0.10       2.38 r
+  U2783/Y (INVX16)                                        0.23       2.61 f
+  U3891/Y (NAND2X8)                                       0.09       2.70 r
+  U4727/Y (OAI2BB1X4)                                     0.21       2.91 f
+  U2385/Y (NOR2X6)                                        0.58       3.49 r
+  U2381/Y (INVX6)                                         0.43       3.92 f
+  U2372/Y (NOR2X1)                                        0.25       4.16 r
+  U3294/Y (CLKBUFX8)                                      0.23       4.40 r
+  U5156/Y (INVX3)                                         0.20       4.59 f
+  U5397/Y (OAI22XL)                                       0.30       4.89 r
+  U5399/Y (AOI211X1)                                      0.19       5.08 f
+  U3222/Y (AOI211X1)                                      0.24       5.32 r
+  U5409/Y (AOI211X1)                                      0.10       5.42 f
+  U3155/Y (OAI2BB1X1)                                     0.16       5.58 r
+  regfile/wdata[52] (REGFILE)                             0.00       5.58 r
+  regfile/U91/Y (INVX3)                                   0.22       5.80 f
+  regfile/U23/Y (CLKBUFX3)                                0.53       6.33 f
+  regfile/U3976/Y (OAI21XL)                               0.41       6.74 r
+  regfile/registers_reg_8__52_/D (DFFRX1)                 0.00       6.74 r
+  data arrival time                                                  6.74
+
+  clock CLK (rise edge)                                   6.50       6.50
+  clock network delay (ideal)                             0.50       7.00
+  clock uncertainty                                      -0.10       6.90
+  regfile/registers_reg_8__52_/CK (DFFRX1)                0.00       6.90 r
+  library setup time                                     -0.16       6.74
+  data required time                                                 6.74
+  --------------------------------------------------------------------------
+  data required time                                                 6.74
+  data arrival time                                                 -6.74
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

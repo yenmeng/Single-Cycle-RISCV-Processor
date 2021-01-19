@@ -1,0 +1,79 @@
+ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s039: Started on Jan 20, 2021 at 00:49:52 CST
+ncverilog
+	RISCV_tb.v
+	+access+r
+	+define+RTL+tb3
+file: RISCV_tb.v
+	module worklib.RISCV:v
+		errors: 0, warnings: 0
+	module worklib.ALU:v
+		errors: 0, warnings: 0
+	module worklib.REGFILE:v
+		errors: 0, warnings: 0
+	module worklib.HW3:v
+		errors: 0, warnings: 0
+	module worklib.HW4:v
+		errors: 0, warnings: 0
+	module worklib.RISCV_tb:v
+		errors: 0, warnings: 0
+		Caching library 'worklib' ....... Done
+	Elaborating the design hierarchy:
+HW3 decoder(.clk(clk), 
+          |
+ncelab: *W,CUVWSP (./RISCV.v,331|10): 1 output port was not connected:
+ncelab: (./RISCV.v,222): mem_addr_I
+
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.ALU:v <0x22d4e1ad>
+			streams:   1, words:  4802
+		worklib.HW3:v <0x2cfb5028>
+			streams:   1, words:  4239
+		worklib.HW4:v <0x0201d998>
+			streams:   1, words:  9115
+		worklib.REGFILE:v <0x2a7662fb>
+			streams:   4, words:  8593
+		worklib.RISCV:v <0x6ea53efc>
+			streams:   7, words:  8536
+		worklib.RISCV_tb:v <0x09095949>
+			streams:   7, words: 11342
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		                  Instances  Unique
+		Modules:                  8       8
+		Registers:               33      33
+		Scalar wires:             8       -
+		Expanded wires:          12       1
+		Vectored wires:          22       -
+		Always blocks:           13      13
+		Initial blocks:           1       1
+		Cont. assignments:        2       2
+		Pseudo assignments:       8       8
+		Simulation timescale:  10ps
+	Writing initial simulation snapshot: worklib.RISCV_tb:v
+Loading snapshot worklib.RISCV_tb:v .................... Done
+*Verdi* Loading libsscore_ius152.so
+ncsim> source /usr/cad/cadence/INCISIV/cur/tools/inca/files/ncsimrc
+ncsim> run
+FSDB Dumper for IUS, Release Verdi_N-2017.12, Linux, 11/12/2017
+(C) 1996 - 2017 by Synopsys, Inc.
+*Verdi* FSDB WARNING: The FSDB file already exists. Overwriting the FSDB file may crash the programs that are using this file.
+*Verdi* : Create FSDB file 'RISCV.fsdb'
+*Verdi* : Begin traversing the scope (RISCV_tb), layer (0).
+*Verdi* : Enable +mda dumping.
+*Verdi* : End of traversing.
+------------------------------------------------------------
+
+START!!! Simulation Start .....
+
+------------------------------------------------------------
+
+====  The RTL result for negative number is correct  ====
+====Make sure to generate more patterns for hidden tb====
+
+Simulation complete via $finish(1) at time 107250 PS + 0
+./RISCV_tb.v:255             $finish;
+ncsim> exit
+TOOL:	ncverilog	15.20-s039: Exiting on Jan 20, 2021 at 00:50:03 CST  (total: 00:00:11)

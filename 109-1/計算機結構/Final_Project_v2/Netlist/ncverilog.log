@@ -1,0 +1,8 @@
+ncverilog: 15.20-s039: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+TOOL:	ncverilog	15.20-s039: Started on Jan 01, 2021 at 22:33:42 CST
+ncverilog
+	RISCV_tb.v
+	+access+r
+	+define+SYN+tb1
+ncverilog: *E,FILEMIS: Cannot find the provided file RISCV_tb.v.
+TOOL:	ncverilog	15.20-s039: Exiting on Jan 01, 2021 at 22:33:42 CST  (total: 00:00:00)

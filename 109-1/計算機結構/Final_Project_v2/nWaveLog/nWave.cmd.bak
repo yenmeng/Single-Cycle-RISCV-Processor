@@ -1,0 +1,371 @@
+wvResizeWindow -win $_nWave1 0 1 1440 802
+wvSetPosition -win $_nWave1 {("G1" 0)}
+wvOpenFile -win $_nWave1 \
+           {/home/raid7_2/userb06/b06066/CA/Final_Project_v2/RISCV.fsdb}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb"
+wvSetPosition -win $_nWave1 {("G1" 5)}
+wvSetPosition -win $_nWave1 {("G1" 5)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/RISCV_tb/clk} \
+{/RISCV_tb/mem_addr_D\[31:2\]} \
+{/RISCV_tb/mem_addr_I\[31:2\]} \
+{/RISCV_tb/mem_rdata_D\[63:0\]} \
+{/RISCV_tb/rst_n} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 1 2 3 4 5 )} 
+wvSetPosition -win $_nWave1 {("G1" 5)}
+wvGetSignalClose -win $_nWave1
+wvSelectGroup -win $_nWave1 {G2}
+wvSelectSignal -win $_nWave1 {( "G1" 2 3 4 )} 
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("G1" 5)}
+wvSelectGroup -win $_nWave1 {G2}
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 3 4 5 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 3 4 5 )} 
+wvSetRadix -win $_nWave1 -format Bin
+wvSelectGroup -win $_nWave1 {G2}
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvSetRadix -win $_nWave1 -format Hex
+wvZoomIn -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 5 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 5 )} 
+wvSetRadix -win $_nWave1 -format Hex
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("G1" 5)}
+wvSelectGroup -win $_nWave1 {G2}
+wvSelectGroup -win $_nWave1 {G2}
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 3 4 )} 
+wvMoveSelected -win $_nWave1
+wvSetPosition -win $_nWave1 {("G1" 5)}
+wvSelectGroup -win $_nWave1 {G2}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0"
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/RISCV_tb/clk} \
+{/RISCV_tb/rst_n} \
+{/RISCV_tb/mem_addr_I\[31:2\]} \
+{/RISCV_tb/mem_addr_D\[31:2\]} \
+{/RISCV_tb/mem_rdata_D\[63:0\]} \
+{/RISCV_tb/chip0/ctrl_signal\[11:0\]} \
+{/RISCV_tb/chip0/immediate\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+}
+wvSelectSignal -win $_nWave1 {( "G1" 6 7 )} 
+wvSetPosition -win $_nWave1 {("G1" 7)}
+wvGetSignalClose -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 6 )} 
+wvSelectSignal -win $_nWave1 {( "G1" 6 )} 
+wvSetRadix -win $_nWave1 -format Bin
+wvSetCursor -win $_nWave1 2319.444444 -snap {("G2" 0)}
+wvSelectSignal -win $_nWave1 {( "G1" 7 )} 
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/mem_D"
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/control"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/regfile"
+wvSetPosition -win $_nWave1 {("G2" 1)}
+wvSetPosition -win $_nWave1 {("G2" 1)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/RISCV_tb/clk} \
+{/RISCV_tb/rst_n} \
+{/RISCV_tb/mem_addr_I\[31:2\]} \
+{/RISCV_tb/mem_addr_D\[31:2\]} \
+{/RISCV_tb/mem_rdata_D\[63:0\]} \
+{/RISCV_tb/chip0/ctrl_signal\[11:0\]} \
+{/RISCV_tb/chip0/immediate\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/RISCV_tb/chip0/regfile/registers\[0:31\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "G2" 1 )} 
+wvSetPosition -win $_nWave1 {("G2" 1)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 6201.388889 -snap {("G2" 1)}
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/control"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/ALU"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/mem_I"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/mem_D"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/regfile"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0"
+wvSetPosition -win $_nWave1 {("G2" 2)}
+wvSetPosition -win $_nWave1 {("G2" 2)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/RISCV_tb/clk} \
+{/RISCV_tb/rst_n} \
+{/RISCV_tb/mem_addr_I\[31:2\]} \
+{/RISCV_tb/mem_addr_D\[31:2\]} \
+{/RISCV_tb/mem_rdata_D\[63:0\]} \
+{/RISCV_tb/chip0/ctrl_signal\[11:0\]} \
+{/RISCV_tb/chip0/immediate\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/RISCV_tb/chip0/regfile/registers\[0:31\]} \
+{/RISCV_tb/chip0/writeback_data\[63:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "G2" 2 )} 
+wvSetPosition -win $_nWave1 {("G2" 2)}
+wvGetSignalClose -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/ALU"
+wvGetSignalClose -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/ALU"
+wvSetPosition -win $_nWave1 {("G2" 3)}
+wvSetPosition -win $_nWave1 {("G2" 3)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/RISCV_tb/clk} \
+{/RISCV_tb/rst_n} \
+{/RISCV_tb/mem_addr_I\[31:2\]} \
+{/RISCV_tb/mem_addr_D\[31:2\]} \
+{/RISCV_tb/mem_rdata_D\[63:0\]} \
+{/RISCV_tb/chip0/ctrl_signal\[11:0\]} \
+{/RISCV_tb/chip0/immediate\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/RISCV_tb/chip0/regfile/registers\[0:31\]} \
+{/RISCV_tb/chip0/writeback_data\[63:0\]} \
+{/RISCV_tb/chip0/ALU/result\[63:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "G2" 3 )} 
+wvSetPosition -win $_nWave1 {("G2" 3)}
+wvSetCursor -win $_nWave1 3027.797965
+wvSetCursor -win $_nWave1 3027.797965
+wvSetCursor -win $_nWave1 3027.797965
+wvSetCursor -win $_nWave1 3027.797965
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSetCursor -win $_nWave1 0.000000
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoom -win $_nWave1 5872.563993 6597.747440
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 9569.577645
+wvSelectSignal -win $_nWave1 {( "G1" 5 )} 
+wvZoom -win $_nWave1 227.508532 4137.811433
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoom -win $_nWave1 5261.345276 5723.150831
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomIn -win $_nWave1
+wvZoomIn -win $_nWave1
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/ALU"
+wvSetPosition -win $_nWave1 {("G2" 4)}
+wvSetPosition -win $_nWave1 {("G2" 4)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/RISCV_tb/clk} \
+{/RISCV_tb/rst_n} \
+{/RISCV_tb/mem_addr_I\[31:2\]} \
+{/RISCV_tb/mem_addr_D\[31:2\]} \
+{/RISCV_tb/mem_rdata_D\[63:0\]} \
+{/RISCV_tb/chip0/ctrl_signal\[11:0\]} \
+{/RISCV_tb/chip0/immediate\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/RISCV_tb/chip0/regfile/registers\[0:31\]} \
+{/RISCV_tb/chip0/writeback_data\[63:0\]} \
+{/RISCV_tb/chip0/ALU/result\[63:0\]} \
+{/RISCV_tb/chip0/ALU/ALUOp\[3:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "G2" 4 )} 
+wvSetPosition -win $_nWave1 {("G2" 4)}
+wvGetSignalClose -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G2" 4 )} 
+wvSetRadix -win $_nWave1 -format Bin
+wvSetCursor -win $_nWave1 6057.156854 -snap {("G3" 0)}
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/ALU"
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/ALU"
+wvSetPosition -win $_nWave1 {("G2" 6)}
+wvSetPosition -win $_nWave1 {("G2" 6)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/RISCV_tb/clk} \
+{/RISCV_tb/rst_n} \
+{/RISCV_tb/mem_addr_I\[31:2\]} \
+{/RISCV_tb/mem_addr_D\[31:2\]} \
+{/RISCV_tb/mem_rdata_D\[63:0\]} \
+{/RISCV_tb/chip0/ctrl_signal\[11:0\]} \
+{/RISCV_tb/chip0/immediate\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/RISCV_tb/chip0/regfile/registers\[0:31\]} \
+{/RISCV_tb/chip0/writeback_data\[63:0\]} \
+{/RISCV_tb/chip0/ALU/result\[63:0\]} \
+{/RISCV_tb/chip0/ALU/ALUOp\[3:0\]} \
+{/RISCV_tb/chip0/ALU/data1\[63:0\]} \
+{/RISCV_tb/chip0/ALU/data2\[63:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "G2" 5 6 )} 
+wvSetPosition -win $_nWave1 {("G2" 6)}
+wvGetSignalClose -win $_nWave1
+wvSetCursor -win $_nWave1 6069.596061 -snap {("G3" 0)}
+wvSelectGroup -win $_nWave1 {G3}
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G1" 4 )} 
+wvSelectSignal -win $_nWave1 {( "G2" 6 )} 
+wvGetSignalOpen -win $_nWave1
+wvGetSignalSetScope -win $_nWave1 "/RISCV_tb/chip0/regfile"
+wvSetPosition -win $_nWave1 {("G2" 9)}
+wvSetPosition -win $_nWave1 {("G2" 9)}
+wvAddSignal -win $_nWave1 -clear
+wvAddSignal -win $_nWave1 -group {"G1" \
+{/RISCV_tb/clk} \
+{/RISCV_tb/rst_n} \
+{/RISCV_tb/mem_addr_I\[31:2\]} \
+{/RISCV_tb/mem_addr_D\[31:2\]} \
+{/RISCV_tb/mem_rdata_D\[63:0\]} \
+{/RISCV_tb/chip0/ctrl_signal\[11:0\]} \
+{/RISCV_tb/chip0/immediate\[31:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G2" \
+{/RISCV_tb/chip0/regfile/registers\[0:31\]} \
+{/RISCV_tb/chip0/writeback_data\[63:0\]} \
+{/RISCV_tb/chip0/ALU/result\[63:0\]} \
+{/RISCV_tb/chip0/ALU/ALUOp\[3:0\]} \
+{/RISCV_tb/chip0/ALU/data1\[63:0\]} \
+{/RISCV_tb/chip0/ALU/data2\[63:0\]} \
+{/RISCV_tb/chip0/regfile/regr1\[5:0\]} \
+{/RISCV_tb/chip0/regfile/regr2\[5:0\]} \
+{/RISCV_tb/chip0/regfile/regw\[5:0\]} \
+}
+wvAddSignal -win $_nWave1 -group {"G3" \
+}
+wvSelectSignal -win $_nWave1 {( "G2" 7 8 9 )} 
+wvSetPosition -win $_nWave1 {("G2" 9)}
+wvGetSignalClose -win $_nWave1
+wvZoom -win $_nWave1 5844.125427 7877.482935
+wvZoomOut -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomIn -win $_nWave1
+wvSetCursor -win $_nWave1 7820.605802
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvSelectSignal -win $_nWave1 {( "G2" 2 )} 
+wvSelectSignal -win $_nWave1 {( "G2" 2 )} 
+wvSetRadix -win $_nWave1 -format Hex
+wvSetCursor -win $_nWave1 3207.432432
+wvSetCursor -win $_nWave1 4727.315823 -snap {("G3" 0)}
+wvSetCursor -win $_nWave1 4000.000000
+wvSetCursor -win $_nWave1 3515.516903 -snap {("G1" 0)}
+wvSetCursor -win $_nWave1 3474.438974 -snap {("G1" 1)}
+wvSetCursor -win $_nWave1 3207.432432 -snap {("G1" 1)}
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvZoomOut -win $_nWave1
+wvSetCursor -win $_nWave1 0.000000
+wvSetOptions -win $_nWave1 -snap off
+wvDisplayGridCount -win $_nWave1 -off
+wvGetSignalClose -win $_nWave1
+wvReloadFile -win $_nWave1
+wvExit

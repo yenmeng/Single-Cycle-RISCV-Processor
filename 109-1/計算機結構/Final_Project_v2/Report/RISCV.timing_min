@@ -1,0 +1,192 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 5
+Design : RISCV
+Version: N-2017.09-SP2
+Date   : Sat Jan  9 01:22:55 2021
+****************************************
+
+Operating Conditions: fast   Library: fast
+Wire Load Model Mode: top
+
+  Startpoint: mem_addr_I_reg_25_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mem_addr_I_reg_25_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  mem_addr_I_reg_25_/CK (DFFRX2)           0.00       0.50 r
+  mem_addr_I_reg_25_/Q (DFFRX2)            0.26       0.76 r
+  U3666/S (ADDHX1)                         0.10       0.86 f
+  U6316/Y (AO22X4)                         0.16       1.01 f
+  mem_addr_I_reg_25_/D (DFFRX2)            0.00       1.01 f
+  data arrival time                                   1.01
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  mem_addr_I_reg_25_/CK (DFFRX2)           0.00       0.60 r
+  library hold time                       -0.01       0.59
+  data required time                                  0.59
+  -----------------------------------------------------------
+  data required time                                  0.59
+  data arrival time                                  -1.01
+  -----------------------------------------------------------
+  slack (MET)                                         0.42
+
+
+  Startpoint: mem_addr_I_reg_23_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mem_addr_I_reg_23_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  mem_addr_I_reg_23_/CK (DFFRX2)           0.00       0.50 r
+  mem_addr_I_reg_23_/Q (DFFRX2)            0.26       0.76 r
+  U4141/S (ADDHX1)                         0.09       0.85 f
+  U4570/Y (NAND2X1)                        0.14       0.99 r
+  U4543/Y (OAI21X2)                        0.07       1.06 f
+  mem_addr_I_reg_23_/D (DFFRX2)            0.00       1.06 f
+  data arrival time                                   1.06
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  mem_addr_I_reg_23_/CK (DFFRX2)           0.00       0.60 r
+  library hold time                       -0.01       0.59
+  data required time                                  0.59
+  -----------------------------------------------------------
+  data required time                                  0.59
+  data arrival time                                  -1.06
+  -----------------------------------------------------------
+  slack (MET)                                         0.47
+
+
+  Startpoint: mem_addr_I_reg_24_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mem_addr_I_reg_24_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  mem_addr_I_reg_24_/CK (DFFRX2)           0.00       0.50 r
+  mem_addr_I_reg_24_/Q (DFFRX2)            0.26       0.76 r
+  U3360/S (ADDHX1)                         0.09       0.85 f
+  U4373/Y (NAND2X1)                        0.14       0.99 r
+  U4541/Y (OAI21X2)                        0.07       1.06 f
+  mem_addr_I_reg_24_/D (DFFRX2)            0.00       1.06 f
+  data arrival time                                   1.06
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  mem_addr_I_reg_24_/CK (DFFRX2)           0.00       0.60 r
+  library hold time                       -0.01       0.59
+  data required time                                  0.59
+  -----------------------------------------------------------
+  data required time                                  0.59
+  data arrival time                                  -1.06
+  -----------------------------------------------------------
+  slack (MET)                                         0.47
+
+
+  Startpoint: mem_addr_I_reg_26_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mem_addr_I_reg_26_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  mem_addr_I_reg_26_/CK (DFFRX1)           0.00       0.50 r
+  mem_addr_I_reg_26_/Q (DFFRX1)            0.33       0.83 r
+  U3640/S (ADDHX1)                         0.11       0.94 f
+  U6292/Y (AO22X4)                         0.14       1.07 f
+  mem_addr_I_reg_26_/D (DFFRX1)            0.00       1.07 f
+  data arrival time                                   1.07
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  mem_addr_I_reg_26_/CK (DFFRX1)           0.00       0.60 r
+  library hold time                       -0.02       0.58
+  data required time                                  0.58
+  -----------------------------------------------------------
+  data required time                                  0.58
+  data arrival time                                  -1.07
+  -----------------------------------------------------------
+  slack (MET)                                         0.50
+
+
+  Startpoint: mem_addr_I_reg_27_
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: mem_addr_I_reg_27_
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  RISCV              tsmc13_wl10           slow
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  mem_addr_I_reg_27_/CK (DFFRX1)           0.00       0.50 r
+  mem_addr_I_reg_27_/Q (DFFRX1)            0.33       0.83 r
+  U4322/S (ADDHX1)                         0.11       0.94 f
+  U6298/Y (AO22X4)                         0.14       1.07 f
+  mem_addr_I_reg_27_/D (DFFRX1)            0.00       1.07 f
+  data arrival time                                   1.07
+
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.50       0.50
+  clock uncertainty                        0.10       0.60
+  mem_addr_I_reg_27_/CK (DFFRX1)           0.00       0.60 r
+  library hold time                       -0.02       0.58
+  data required time                                  0.58
+  -----------------------------------------------------------
+  data required time                                  0.58
+  data arrival time                                  -1.07
+  -----------------------------------------------------------
+  slack (MET)                                         0.50
+
+
+1
